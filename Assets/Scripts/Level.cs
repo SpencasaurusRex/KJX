@@ -19,7 +19,7 @@ public class AirportData
     public List<int> Connections = new List<int>();
 
     [HideInInspector]
-    public int Delta;
+    public int VisualNumber;
     [HideInInspector]
     public bool Dirty;
 }

@@ -13,9 +13,9 @@
         {
             var data = gameData.AirportData[i];
             if (!data.Dirty) continue;
-            
+
             var text = gameData.AirportText[i];
-            text.text = data.CurrentNumber + " / " + data.TargetNumber;
+            text.text = data.CurrentNumber + " / " + data.TargetNumber + " " + data.Delta;
             data.Dirty = false;
         }
     }
