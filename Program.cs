@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace KJX2
+namespace KJX
 {
     /// <summary>
     /// The main class.
@@ -13,7 +13,7 @@ namespace KJX2
         [STAThread]
         static void Main()
         {
-            using (var game = new Game1())
+            using (var game = new Game())
                 game.Run();
         }
     }
