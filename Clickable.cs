@@ -1,15 +1,18 @@
-﻿using Microsoft.Xna.Framework;
-using Nez;
+﻿using Nez;
 
 namespace KJX
 {
     public class Clickable : Component
     {
-        public Rectangle ClickArea;
+        public bool Left;
+        public bool Right;
+        public bool LeftClicked;
+        public bool RightClicked;
 
-        public Clickable(Rectangle clickArea)
+        public Clickable(bool left, bool right)
         {
-            ClickArea = clickArea;
+            Left = left;
+            Right = right;
         }
     }
 }
