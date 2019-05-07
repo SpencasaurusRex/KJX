@@ -1,7 +1,7 @@
 ﻿using Nez;
 using Nez.Sprites;
 
-namespace KJX
+namespace KJX.Components
 {
     public class SpriteButton : Component
     {

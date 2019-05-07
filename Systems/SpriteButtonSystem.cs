@@ -1,4 +1,5 @@
-﻿using Nez;
+﻿using KJX.Components;
+using Nez;
 using Nez.Sprites;
 
 namespace KJX
@@ -14,7 +15,7 @@ namespace KJX
             var currentSprite = entity.getComponent<Sprite>();
             var clickable = entity.getComponent<Clickable>();
             var button = entity.getComponent<SpriteButton>();
-            var targetSprite = clickable.LeftClicked ? button.ClickedSprite : button.DefaultSprite;
+            var targetSprite = clickable.LeftPressed ? button.ClickedSprite : button.DefaultSprite;
             
             if (currentSprite != targetSprite)
             {

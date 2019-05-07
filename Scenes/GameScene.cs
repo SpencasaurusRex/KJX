@@ -1,8 +1,9 @@
-﻿using Microsoft.Xna.Framework;
+﻿using KJX.Components;
+using KJX.Components.Global;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Nez;
 using Nez.Sprites;
-using System;
 
 namespace KJX
 {
@@ -24,17 +25,18 @@ namespace KJX
             addRenderer(new DefaultRenderer(camera: camera));
 
             var globals = createEntity("globals");
+			globals.addComponent(new GlobalInput());
 
             CreateButton(0, 0);
 
-            addEntityProcessor(new ClickDetector());
+            addEntityProcessor(new ClickDetector(globals));
             addEntityProcessor(new SpriteButtonSystem());
         }
 
         public void CreateButton(float x, float y)
         {
             var e = createEntity("testButton");
-            e.addComponent(new Clickable(true, true));
+            e.addComponent(new Clickable());
             e.addComponent(new SpriteButton(new Sprite(buttonTexture), new Sprite(buttonPressedTexture)));
         }
 
