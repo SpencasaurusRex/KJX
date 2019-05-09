@@ -1,8 +1,6 @@
-﻿using Nez;
-
-namespace KJX.Components
+﻿namespace KJX.Components
 {
-    public class Clickable : Component
+    public class Clickable : Nez.Component
     {
 		public bool LeftPressed;
 		public bool RightPressed;

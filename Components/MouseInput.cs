@@ -1,6 +1,6 @@
 ﻿namespace KJX.Components.Global
 {
-	public class GlobalInput : Nez.Component
+	public class MouseInput : Nez.Component
 	{
 		public bool LeftPressed;
 		public bool RightPressed;

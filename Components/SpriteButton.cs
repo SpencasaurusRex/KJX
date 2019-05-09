@@ -1,17 +1,17 @@
-﻿using Nez;
-using Nez.Sprites;
+﻿using Microsoft.Xna.Framework.Graphics;
+using Nez;
 
 namespace KJX.Components
 {
     public class SpriteButton : Component
     {
-        public Sprite DefaultSprite;
-        public Sprite ClickedSprite;
+        public Texture2D DefaultTexture;
+        public Texture2D ClickedTexture;
 
-        public SpriteButton(Sprite defaultSprite, Sprite clickedSprite)
+        public SpriteButton(Texture2D defaultTexture, Texture2D clickedTexture)
         {
-            DefaultSprite = defaultSprite;
-            ClickedSprite = clickedSprite;
+            DefaultTexture = defaultTexture;
+            ClickedTexture = clickedTexture;
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using KJX.Components;
 using Nez;
 using Nez.Sprites;
+using Nez.Textures;
 
 namespace KJX
 {
@@ -12,15 +13,15 @@ namespace KJX
 
         public override void process(Entity entity)
         {
-            var currentSprite = entity.getComponent<Sprite>();
+            var sprite = entity.getOrCreateComponent<Sprite>();
+            var currentTexture = sprite.subtexture?.texture2D;
             var clickable = entity.getComponent<Clickable>();
             var button = entity.getComponent<SpriteButton>();
-            var targetSprite = clickable.LeftPressed ? button.ClickedSprite : button.DefaultSprite;
+            var targetTexture = clickable.LeftPressed ? button.ClickedTexture : button.DefaultTexture;
             
-            if (currentSprite != targetSprite)
+            if (currentTexture != targetTexture)
             {
-                entity.removeComponent<Sprite>();
-                entity.addComponent(targetSprite);
+                sprite.setSubtexture(new Subtexture(targetTexture));
             }
         }
     }

@@ -6,13 +6,13 @@ namespace KJX.Systems
 {
 	public class InputSystem : EntityProcessingSystem
 	{
-		public InputSystem(Entity globalEntity) : base(new Matcher().all(typeof(GlobalInput)))
+		public InputSystem(Entity globalEntity) : base(new Matcher().all(typeof(MouseInput)))
 		{
 		}
 
 		public override void process(Entity entity)
 		{
-			var input = entity.getComponent<GlobalInput>();
+			var input = entity.getComponent<MouseInput>();
 
 			input.LeftPressedLastFrame = input.LeftPressed;
 			input.RightPressedLastFrame = input.RightPressed;
