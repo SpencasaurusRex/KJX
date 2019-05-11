@@ -2,10 +2,9 @@
 {
     public class NodeAmount : Nez.Component
     {
-        public float Amount;
-        public float Delta;
+        public int Amount;
 
-        public NodeAmount(float amount)
+        public NodeAmount(int amount)
         {
             Amount = amount;
         }

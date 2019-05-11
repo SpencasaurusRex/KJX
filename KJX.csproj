@@ -44,11 +44,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Components\Clickable.cs" />
+    <Compile Include="Components\ConnectionLoad.cs" />
     <Compile Include="Components\EntityMap.cs" />
     <Compile Include="Components\MapLoad.cs" />
     <Compile Include="Components\MouseInput.cs" />
     <Compile Include="Components\GlobalNodeMap.cs" />
     <Compile Include="Components\NodeAmount.cs" />
+    <Compile Include="Components\SlidingNumber.cs" />
+    <Compile Include="Components\UvMesh.cs" />
     <Compile Include="Factories\NodeFactory.cs" />
     <Compile Include="Systems\ClickDetector.cs" />
     <Compile Include="Game.cs" />
@@ -56,8 +59,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Components\SpriteButton.cs" />
+    <Compile Include="Systems\ConnectionLoader.cs" />
     <Compile Include="Systems\InputSystem.cs" />
     <Compile Include="Systems\MapLoader.cs" />
+    <Compile Include="Systems\SlidingNumberMover.cs" />
+    <Compile Include="Systems\NodeClickHandler.cs" />
+    <Compile Include="Systems\SlidingUVWriter.cs" />
     <Compile Include="Systems\SpriteButtonSystem.cs" />
   </ItemGroup>
   <ItemGroup>

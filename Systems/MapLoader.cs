@@ -39,6 +39,9 @@ namespace KJX.Systems
             foreach (var (i,j) in load.Connections)
             {
                 map.Connect(nodeEntities[i], nodeEntities[j]);
+                map.Connect(nodeEntities[j], nodeEntities[i]);
+                var connectionLoad = scene.createEntity("connectionLoad");
+                connectionLoad.addComponent(new ConnectionLoad(nodeEntities[i].position, nodeEntities[j].position));
             }
 
             entity.removeComponent<MapLoad>();

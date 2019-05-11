@@ -1,9 +1,8 @@
 ﻿using Microsoft.Xna.Framework.Graphics;
-using Nez;
 
 namespace KJX.Components
 {
-    public class SpriteButton : Component
+    public class SpriteButton : Nez.Component
     {
         public Texture2D DefaultTexture;
         public Texture2D ClickedTexture;

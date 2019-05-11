@@ -3,7 +3,7 @@ using Nez;
 
 namespace KJX.Components
 {
-    public class EntityMap : Component
+    public class EntityMap : Nez.Component
     {
         public Dictionary<Entity, List<Entity>> Connections;
 

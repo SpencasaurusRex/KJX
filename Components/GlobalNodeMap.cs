@@ -3,7 +3,7 @@ using Nez;
 
 namespace KJX.Components.Global
 {
-    public class GlobalNodeMap : Component
+    public class GlobalNodeMap : Nez.Component
     {
         public Dictionary<int, NodeAmount> Nodes;
         public Dictionary<int, List<int>> Connections;

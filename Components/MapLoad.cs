@@ -3,7 +3,7 @@ using Nez;
 
 namespace KJX.Components
 {
-    public class MapLoad : Component
+    public class MapLoad : Nez.Component
     {
         public NodeLoad[] Nodes;
         public Tuple<int, int>[] Connections;
